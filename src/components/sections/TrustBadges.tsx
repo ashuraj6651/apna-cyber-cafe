@@ -2,7 +2,7 @@
 
 import { useLang } from '@/lib/lang-context';
 import { useIO } from '@/lib/hooks';
-import { Shield, Lock, Zap, Users, Award } from 'lucide-react';
+import { Shield, Lock, Zap, UserCheck, Award } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 interface TrustBadgeItem {
@@ -32,7 +32,7 @@ const badges: TrustBadgeItem[] = [
     gradient: 'from-accent to-secondary',
   },
   {
-    icon: Users,
+    icon: UserCheck,
     titleKey: 'trusted',
     descKey: 'trustedDesc',
     gradient: 'from-primary to-accent',

@@ -46,8 +46,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="text-2xl font-bold gradient-text mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
-              Apna Cyber Cafe
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="/logo.jpg"
+                alt="Apna Cyber Cafe"
+                className="h-11 w-11 rounded-xl object-cover shadow-lg border border-white/10"
+              />
+              <div className="flex flex-col leading-tight">
+                <span className="text-lg font-bold text-white">Apna Cyber Cafe</span>
+                <span className="text-[11px] text-white/50 font-medium">CSC • Sultanganj, Bihar</span>
+              </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               {t.footer.desc}

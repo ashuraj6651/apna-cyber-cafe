@@ -117,10 +117,14 @@ export default function Hero() {
               <div className="absolute inset-12 rounded-full border-2 border-dashed border-primary/15 animate-[spin_30s_linear_infinite]" />
               <div className="absolute inset-24 rounded-full border border-secondary/15 animate-[spin_20s_linear_infinite_reverse]" />
 
-              {/* Center icon */}
+              {/* Center Logo */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-28 h-28 rounded-3xl bg-gradient-to-br from-primary to-accent shadow-2xl shadow-primary/30 flex items-center justify-center animate-pulse-glow">
-                  <span className="text-white text-4xl font-bold">CSC</span>
+                <div className="w-36 h-36 rounded-3xl bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm border-2 border-white/60 shadow-2xl shadow-primary/20 flex items-center justify-center animate-pulse-glow p-2">
+                  <img
+                    src="/logo.jpg"
+                    alt="Apna Cyber Cafe"
+                    className="w-full h-full object-contain rounded-2xl"
+                  />
                 </div>
               </div>
 

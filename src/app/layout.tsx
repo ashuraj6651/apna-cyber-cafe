@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Apna Cyber Cafe" }],
   icons: {
-    icon: "/logo.svg",
+    icon: "/logo.jpg",
   },
   openGraph: {
     title: "Apna Cyber Cafe | आपका भरोसेमंद डिजिटल सेवा केंद्र",
@@ -67,7 +67,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Apna Cyber Cafe",
-              image: "/logo.svg",
+              image: "/logo.jpg",
               telephone: "+91 8271099312",
               address: {
                 "@type": "PostalAddress",

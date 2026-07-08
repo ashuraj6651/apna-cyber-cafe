@@ -35,8 +35,8 @@ export const translations = {
       fastDesc: 'समय पर काम पूरा',
       trusted: 'ग्राहकों का भरोसा',
       trustedDesc: '500+ संतुष्ट ग्राहक',
-      experienced: 'अनुभवी स्टाफ',
-      experiencedDesc: 'पेशेवर और अनुभवी टीम',
+      experienced: 'वर्षों का अनुभव',
+      experiencedDesc: 'लंबे समय से Sultanganj में सेवा।',
     },
     stats: {
       happyCustomers: 'संतुष्ट ग्राहक',
@@ -122,8 +122,8 @@ export const translations = {
         desc: 'सभी सेवाएं समय पर और बिना देरी के पूरी की जाती हैं।',
       },
       trusted: {
-        title: 'भरोसेमंद टीम',
-        desc: 'हमारी टीम पूरी तरह पेशेवर और अनुभवी है।',
+        title: 'व्यक्तिगत सेवा',
+        desc: 'हर ग्राहक को व्यक्तिगत ध्यान और सही मार्गदर्शन।',
       },
       secure: {
         title: 'सुरक्षित डेटा',
@@ -245,8 +245,8 @@ export const translations = {
       fastDesc: 'Work completed on time',
       trusted: 'Trusted by Customers',
       trustedDesc: '500+ satisfied customers',
-      experienced: 'Experienced Staff',
-      experiencedDesc: 'Professional and experienced team',
+      experienced: 'Years of Experience',
+      experiencedDesc: 'Serving Sultanganj for a long time with dedication.',
     },
     stats: {
       happyCustomers: 'Happy Customers',
@@ -332,8 +332,8 @@ export const translations = {
         desc: 'All services are completed on time without any delay.',
       },
       trusted: {
-        title: 'Trusted Team',
-        desc: 'Our team is completely professional and experienced.',
+        title: 'Personal Service',
+        desc: 'Every customer gets personal attention and proper guidance.',
       },
       secure: {
         title: 'Secure Data',

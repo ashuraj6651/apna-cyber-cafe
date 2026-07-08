@@ -2,11 +2,11 @@
 
 import { useLang } from '@/lib/lang-context';
 import { useIO } from '@/lib/hooks';
-import { Zap, Users, Shield, Headphones, Building } from 'lucide-react';
+import { Zap, UserCheck, Shield, Headphones, Building } from 'lucide-react';
 
 const features = [
   { key: 'fast' as const, Icon: Zap },
-  { key: 'trusted' as const, Icon: Users },
+  { key: 'trusted' as const, Icon: UserCheck },
   { key: 'secure' as const, Icon: Shield },
   { key: 'support' as const, Icon: Headphones },
   { key: 'gov' as const, Icon: Building },

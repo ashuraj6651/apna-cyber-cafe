@@ -62,14 +62,19 @@ export default function Navbar() {
               e.preventDefault();
               handleNavClick('#hero');
             }}
-            className="flex items-center gap-2 shrink-0"
+            className="flex items-center gap-2.5 shrink-0"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-white font-bold text-sm">AC</span>
+            <img
+              src="/logo.jpg"
+              alt="Apna Cyber Cafe"
+              className="h-10 w-10 rounded-xl object-cover shadow-md"
+            />
+            <div className="hidden sm:flex flex-col leading-tight">
+              <span className="gradient-text font-bold text-base tracking-tight">
+                Apna Cyber Cafe
+              </span>
+              <span className="text-[10px] text-muted font-medium -mt-0.5">CSC • Sultanganj</span>
             </div>
-            <span className="gradient-text font-bold text-lg hidden sm:inline-block">
-              Apna Cyber Cafe
-            </span>
           </a>
 
           {/* Desktop Nav Links */}
@@ -121,11 +126,16 @@ export default function Navbar() {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-80 p-0">
                   <SheetHeader className="p-6 pb-4 border-b border-border">
-                    <SheetTitle className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">AC</span>
+                    <SheetTitle className="flex items-center gap-2.5">
+                      <img
+                        src="/logo.jpg"
+                        alt="Apna Cyber Cafe"
+                        className="h-9 w-9 rounded-lg object-cover shadow-md"
+                      />
+                      <div className="flex flex-col leading-tight">
+                        <span className="gradient-text font-bold text-sm">Apna Cyber Cafe</span>
+                        <span className="text-[10px] text-muted font-medium">CSC • Sultanganj</span>
                       </div>
-                      <span className="gradient-text font-bold">Apna Cyber Cafe</span>
                     </SheetTitle>
                   </SheetHeader>
                   <div className="flex flex-col py-2 overflow-y-auto max-h-[calc(100vh-8rem)]">

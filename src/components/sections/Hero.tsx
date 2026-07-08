@@ -107,24 +107,37 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: Decorative Illustration */}
+          {/* Right: Cyber Cafe Image + Floating Cards */}
           <div className={`${isVisible ? 'io-visible' : 'io-hidden'} relative hidden md:block`}>
-            <div className="relative w-full aspect-square max-w-lg mx-auto">
-              {/* Central glow */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 blur-3xl" />
+            <div className="relative">
+              {/* Background glow */}
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 blur-2xl" />
 
-              {/* Central decorative circle */}
-              <div className="absolute inset-12 rounded-full border-2 border-dashed border-primary/15 animate-[spin_30s_linear_infinite]" />
-              <div className="absolute inset-24 rounded-full border border-secondary/15 animate-[spin_20s_linear_infinite_reverse]" />
+              {/* Main Image */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary/15 border border-white/50">
+                <img
+                  src="/hero-cafe.jpg"
+                  alt="Apna Cyber Cafe - Digital Service Center"
+                  className="w-full h-auto object-cover"
+                />
+                {/* Gradient overlay at bottom */}
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/20 to-transparent" />
+              </div>
 
-              {/* Center Logo */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-36 h-36 rounded-3xl bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm border-2 border-white/60 shadow-2xl shadow-primary/20 flex items-center justify-center animate-pulse-glow p-2">
-                  <img
-                    src="/logo.jpg"
-                    alt="Apna Cyber Cafe"
-                    className="w-full h-full object-contain rounded-2xl"
-                  />
+              {/* Rating badge */}
+              <div className="absolute -bottom-4 -left-4 glass rounded-2xl px-4 py-3 shadow-xl animate-float-slow">
+                <div className="flex items-center gap-2">
+                  <div className="flex gap-0.5">
+                    {[1,2,3,4].map(i => (
+                      <svg key={i} className="w-4 h-4 fill-amber-400 text-amber-400" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      </svg>
+                    ))}
+                    <svg className="w-4 h-4 fill-amber-400/40 text-amber-400/40" viewBox="0 0 24 24">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  </div>
+                  <span className="text-sm font-bold text-heading">4.3★</span>
                 </div>
               </div>
 
@@ -132,7 +145,7 @@ export default function Hero() {
               {floatingCards.map((card, i) => (
                 <div
                   key={i}
-                  className={`absolute ${card.position} animate-float ${card.delay}`}
+                  className={`absolute ${card.position} animate-float`}
                   style={{ animationDelay: `${i * 0.6}s` }}
                 >
                   <div className="glass rounded-2xl px-4 py-3 shadow-lg shadow-black/5 min-w-[160px]">
@@ -150,9 +163,9 @@ export default function Hero() {
               ))}
 
               {/* Decorative dots */}
-              <div className="absolute top-4 left-8 w-3 h-3 rounded-full bg-primary/20 animate-float" />
-              <div className="absolute bottom-20 left-4 w-2 h-2 rounded-full bg-secondary/30 animate-float-slow" />
-              <div className="absolute top-1/3 right-4 w-2.5 h-2.5 rounded-full bg-accent/25 animate-float" style={{ animationDelay: '1s' }} />
+              <div className="absolute -top-2 -left-2 w-3 h-3 rounded-full bg-primary/20 animate-float" />
+              <div className="absolute -bottom-2 right-8 w-2 h-2 rounded-full bg-secondary/30 animate-float-slow" />
+              <div className="absolute top-8 -right-2 w-2.5 h-2.5 rounded-full bg-accent/25 animate-float" style={{ animationDelay: '1s' }} />
             </div>
           </div>
         </div>

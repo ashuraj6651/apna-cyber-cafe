@@ -98,7 +98,7 @@ export default function RootLayout({
                 closes: "19:00",
               },
               priceRange: "₹₹",
-              url: "https://apnacybercafe.com",
+              url: "https://maps.app.goo.gl/kAgB7Yo3EPcZXy2h6",
             }),
           }}
         />

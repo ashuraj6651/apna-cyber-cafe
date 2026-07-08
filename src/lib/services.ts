@@ -275,8 +275,8 @@ export const businessInfo = {
   phone: '+91 8271099312',
   whatsapp: 'https://wa.me/918271099312',
   googleRating: 4.3,
-  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.7!2d86.7298088!3d25.2365077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE0JzExLjQiTiA4NsKwNDMnMzcuMyJF!5e0!3m2!1sen!2sin!4v1',
-  mapDirectionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=25.2365077,86.7298088',
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.7!2d86.7298088!3d25.2365077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f1b9bdd0cf3393%3A0xf374ba529528dcee!2sApna%20cyber%20cafe!5e0!3m2!1sen!2sin!4v1751700000',
+  mapDirectionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Apna+cyber+cafe+Sultanganj+Bihar+813213',
   workingHours: 'सोमवार - रविवार: सुबह 9:00 - शाम 7:00',
   workingHoursEn: 'Monday - Sunday: 9:00 AM - 7:00 PM',
 };

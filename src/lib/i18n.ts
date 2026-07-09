@@ -42,7 +42,7 @@ export const translations = {
       happyCustomers: 'संतुष्ट ग्राहक',
       services: 'सेवाएं',
       googleRating: 'Google Rating',
-      support: 'सपोर्ट',
+      documentsCompleted: 'दस्तावेज़ पूरे',
     },
     popularServices: {
       title: 'लोकप्रिय सेवाएं',
@@ -252,7 +252,7 @@ export const translations = {
       happyCustomers: 'Happy Customers',
       services: 'Services',
       googleRating: 'Google Rating',
-      support: 'Support',
+      documentsCompleted: 'Documents Done',
     },
     popularServices: {
       title: 'Popular Services',

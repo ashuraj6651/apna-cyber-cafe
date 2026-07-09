@@ -2,7 +2,7 @@
 
 import { useLang } from '@/lib/lang-context';
 import { useIO } from '@/lib/hooks';
-import { Phone, MessageCircle, Shield } from 'lucide-react';
+import { Phone, MessageCircle, Shield, BadgeCheck } from 'lucide-react';
 import { businessInfo } from '@/lib/services';
 
 export default function Hero() {
@@ -60,12 +60,20 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className={`${isVisible ? 'io-visible-left' : 'io-hidden-left'}`}>
-            {/* CSC Badge */}
-            <div className="inline-flex items-center gap-2 bg-primary-light rounded-full px-4 py-2 mb-6">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm font-medium text-primary">
-                {t.hero.badge}
-              </span>
+            {/* CSC Badge + Certified Partner */}
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <div className="inline-flex items-center gap-2 bg-primary-light rounded-full px-4 py-2">
+                <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                <span className="text-sm font-medium text-primary">
+                  {t.hero.badge}
+                </span>
+              </div>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-full px-4 py-2">
+                <BadgeCheck className="w-4.5 h-4.5 text-emerald-600" />
+                <span className="text-sm font-semibold text-emerald-700">
+                  Certified CSC Partner
+                </span>
+              </div>
             </div>
 
             {/* Headline */}
@@ -138,6 +146,17 @@ export default function Hero() {
                     </svg>
                   </div>
                   <span className="text-sm font-bold text-heading">4.3★</span>
+                </div>
+              </div>
+
+              {/* Certified CSC badge on image */}
+              <div className="absolute -top-3 -right-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-2xl px-3.5 py-2.5 shadow-lg shadow-emerald-500/25 animate-float" style={{ animationDelay: '1s' }}>
+                <div className="flex items-center gap-2">
+                  <BadgeCheck className="w-5 h-5" />
+                  <div>
+                    <p className="text-[10px] leading-tight opacity-90">Government of India</p>
+                    <p className="text-xs font-bold leading-tight">Certified CSC</p>
+                  </div>
                 </div>
               </div>
 

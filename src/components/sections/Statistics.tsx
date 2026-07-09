@@ -2,14 +2,14 @@
 
 import { useLang } from '@/lib/lang-context';
 import { useIO, useCounter } from '@/lib/hooks';
-import { Users, Layers, Star, Headphones } from 'lucide-react';
+import { Users, Layers, Star, FileCheck } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 interface StatItem {
   icon: LucideIcon;
   value: number;
   suffix: string;
-  labelKey: 'happyCustomers' | 'services' | 'googleRating' | 'support';
+  labelKey: 'happyCustomers' | 'services' | 'googleRating' | 'documentsCompleted';
   gradient: string;
 }
 
@@ -36,10 +36,10 @@ const stats: StatItem[] = [
     gradient: 'from-amber-400 to-orange-500',
   },
   {
-    icon: Headphones,
-    value: 7,
-    suffix: '',
-    labelKey: 'support',
+    icon: FileCheck,
+    value: 1000,
+    suffix: '+',
+    labelKey: 'documentsCompleted',
     gradient: 'from-accent to-secondary',
   },
 ];

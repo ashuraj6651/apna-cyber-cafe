@@ -116,7 +116,7 @@ export default function Hero() {
           </div>
 
           {/* Right: Cyber Cafe Image + Floating Cards */}
-          <div className={`${isVisible ? 'io-visible' : 'io-hidden'} relative hidden md:block`}>
+          <div className={`${isVisible ? 'io-visible' : 'io-hidden'} relative block mt-10 lg:mt-0`}>
             <div className="relative">
               {/* Background glow */}
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 blur-2xl" />

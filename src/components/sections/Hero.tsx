@@ -124,7 +124,7 @@ export default function Hero() {
               {/* Main Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary/15 border border-white/50">
                 <img
-                  src="/hero-cafe.jpg"
+                  src="/hero-cafe-new.jpg"
                   alt="Apna Cyber Cafe - Digital Service Center"
                   className="w-full h-auto object-cover"
                 />

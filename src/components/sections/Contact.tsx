@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { useLang } from '@/lib/lang-context';
 import { useIO } from '@/lib/hooks';
 import { useToast } from '@/hooks/use-toast';
@@ -27,11 +28,30 @@ export default function Contact() {
     e.preventDefault();
     setSending(true);
     try {
-      await fetch('/api/contact', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
+
+      if (!res.ok) throw new Error('Message failed');
+
+      // Fire-and-forget email notification via EmailJS.
+      try {
+        await emailjs.send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID!,
+          {
+            name: form.name,
+            email: form.email,
+            message: form.message,
+          },
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        );
+      } catch (emailErr) {
+        console.error('EmailJS notification failed:', emailErr);
+      }
+
       toast({ title: t.contact.sent });
       setForm({ name: '', email: '', message: '' });
     } catch {

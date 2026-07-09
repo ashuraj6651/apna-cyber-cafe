@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { db } from '@/lib/db';
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,17 +13,28 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // In production, save to database
-    console.log('Booking received:', { name, phone, service, date, time });
+    const appointment = await db.appointment.create({
+      data: { name, phone, service, date, time },
+    });
 
     return NextResponse.json({
       success: true,
       message: 'Appointment booked successfully!',
+      appointment,
     });
-  } catch {
+  } catch (err) {
+    console.error('Booking error:', err);
     return NextResponse.json(
-      { success: false, message: 'Invalid request' },
-      { status: 400 }
+      { success: false, message: 'Something went wrong. Please try again.' },
+      { status: 500 }
     );
   }
+}
+
+// Optional: list all bookings (useful for an admin page later)
+export async function GET() {
+  const appointments = await db.appointment.findMany({
+    orderBy: { createdAt: 'desc' },
+  });
+  return NextResponse.json({ success: true, appointments });
 }

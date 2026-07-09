@@ -1,5 +1,6 @@
 'use client';
 
+import emailjs from '@emailjs/browser';
 import { useState, type FormEvent } from 'react';
 import { useLang } from '@/lib/lang-context';
 import { useIO } from '@/lib/hooks';
@@ -40,11 +41,34 @@ export default function AppointmentBooking() {
 
     setLoading(true);
     try {
-      await fetch('/api/book', {
+      const res = await fetch('/api/book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
+
+      if (!res.ok) throw new Error('Booking failed');
+
+      // Fire-and-forget email notification via EmailJS.
+      // If EmailJS isn't configured or fails, we don't block the success UI —
+      // the booking is already saved in the database.
+      try {
+        await emailjs.send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+          {
+            name: form.name,
+            phone: form.phone,
+            service: form.service,
+            date: form.date,
+            time: form.time,
+          },
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        );
+      } catch (emailErr) {
+        console.error('EmailJS notification failed:', emailErr);
+      }
+
       setSuccess(true);
       setForm({ name: '', phone: '', service: '', date: '', time: '' });
       setErrors({});

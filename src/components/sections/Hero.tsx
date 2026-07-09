@@ -15,7 +15,7 @@ export default function Hero() {
       desc: t.hero.floatingCard1Desc,
       delay: 'delay-100',
       position: 'top-8 -right-4 md:top-12 md:right-4',
-      icon: <Shield className="w-5 h-5 text-primary" />,
+      icon: <Shield className="w-3 h-3 text-primary" />,
     },
     {
       title: t.hero.floatingCard2Title,
@@ -23,7 +23,7 @@ export default function Hero() {
       delay: 'delay-300',
       position: 'top-1/2 -right-2 md:top-1/2 md:-right-8',
       icon: (
-        <svg className="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-3 h-3 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="2" y="5" width="20" height="14" rx="2" />
           <line x1="2" y1="10" x2="22" y2="10" />
         </svg>
@@ -35,7 +35,7 @@ export default function Hero() {
       delay: 'delay-500',
       position: 'bottom-8 -right-4 md:bottom-12 md:right-8',
       icon: (
-        <svg className="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-3 h-3 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M4 20V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12" />
           <path d="M2 20h20" />
           <path d="M12 4v4" />
@@ -128,8 +128,7 @@ export default function Hero() {
                   alt="Apna Cyber Cafe - Digital Service Center"
                   className="w-full h-auto object-cover"
                 />
-                {/* Gradient overlay at bottom */}
-                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/20 to-transparent" />
+
               </div>
 
               {/* Rating badge */}
@@ -160,23 +159,20 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Floating Glass Cards */}
+              {/* Floating Service Pills */}
               {floatingCards.map((card, i) => (
                 <div
                   key={i}
                   className={`absolute ${card.position} animate-float`}
                   style={{ animationDelay: `${i * 0.6}s` }}
                 >
-                  <div className="glass rounded-2xl px-4 py-3 shadow-lg shadow-black/5 min-w-[160px]">
-                    <div className="flex items-center gap-2.5 mb-1">
-                      <div className="w-8 h-8 rounded-lg bg-primary-light flex items-center justify-center">
-                        {card.icon}
-                      </div>
-                      <span className="text-sm font-semibold text-heading whitespace-nowrap">
-                        {card.title}
-                      </span>
+                  <div className="glass rounded-full px-3 py-1.5 shadow-lg shadow-black/5 flex items-center gap-1.5">
+                    <div className="w-5 h-5 rounded-md bg-primary-light flex items-center justify-center">
+                      {card.icon}
                     </div>
-                    <p className="text-xs text-text ml-[2.5rem]">{card.desc}</p>
+                    <span className="text-[11px] font-semibold text-heading whitespace-nowrap">
+                      {card.title}
+                    </span>
                   </div>
                 </div>
               ))}
